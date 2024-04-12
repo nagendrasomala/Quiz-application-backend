@@ -405,7 +405,7 @@ quiz.post('/generateExcel', async (req, res) => {
       'Student Name': data.name,
       'Marks': data.marks,
       'Score': data.score,
-      'Tab Switch': data.tabswitch-2,
+      'Tab Switch': abs(data.tabswitch-2),
     }));
 
     const worksheet = XLSX.utils.json_to_sheet(worksheetData);
